@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+
+/*.backendcode {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid rgb(227, 229, 232);
+    border-radius: 3px;
+    padding: 20px;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}*/
+
+.CodeMirror {
+    font-size: 16px;
+    border: 1px solid rgb(227, 229, 232);
+    border-radius: 3px;
+}
+
+.backendcodelanguage {
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid rgb(227, 229, 232);
+    border-radius: 3px;
+    background: white;
+    margin-bottom: 5px;
+}
