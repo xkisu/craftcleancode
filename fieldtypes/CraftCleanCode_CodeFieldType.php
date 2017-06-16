@@ -12,7 +12,7 @@ class CraftCleanCode_CodeFieldType extends BaseFieldType
     public function getInputHtml($name, $value) {
         // If value is null, we set it to an array to prevent template errors
         if(!$value) {
-        $value = array();
+            $value = array();
         }
 
         $id = craft()->templates->formatInputId($name);
@@ -38,8 +38,6 @@ class CraftCleanCode_CodeFieldType extends BaseFieldType
 
         $language = 'javascript';
 
-
-
         return craft()->templates->render('craftcleancode/backend/code', array(
             'name'  => $name,
             'value' => $value,
@@ -48,7 +46,13 @@ class CraftCleanCode_CodeFieldType extends BaseFieldType
         ));
     }
 
+    public function defineContentAttribute() {
+        return array(AttributeType::String, 'column' => ColumnType::Text);
+	}
+
     public function prepValueFromPost($value) {   
+        // var_dump(json_encode($value));
+        // die();
         return json_encode($value);
     }
 

@@ -1,0 +1,17 @@
+[{
+        "version": "1.0.0",
+        "downloadUrl": "https://github.com/xkisu/craftcleancode/archive/master.zip",
+        "date": "2017-06-15T19:17:18.586Z",
+        "notes": [
+            "[Added] Initial release"
+        ]
+    },
+    {
+        "version": "1.0.1",
+        "downloadUrl": "https://github.com/xkisu/craftcleancode/archive/master.zip",
+        "date": "2017-06-16T15:43:18.586Z",
+        "notes": [
+            "[Fixed] Code over ~200 chars not being saved"
+        ]
+    }
+]

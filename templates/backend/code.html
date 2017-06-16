@@ -19,7 +19,8 @@
 <textarea class="backendcode" name="{{ name }}[code]">{{ value.code is defined ? value.code }}</textarea>
 
 <script>
-    window.onload = function() {
+    document.addEventListener("DOMContentLoaded", function(event) {
+        console.log('[name="{{ name }}[code]"]');
         var editor = CodeMirror.fromTextArea(
             $('[name="{{ name }}[code]"]').get(0), {
                 mode: "{{ value.language is defined ? value.language : 'javascript' }}",
@@ -32,6 +33,10 @@
             }
         );
 
+        /*editor.on('change', function() {
+            editor.save();
+        });*/
+
         $('[name="{{ name }}[language]"]').change(function() {
             var language = $(this).val();
 
@@ -39,5 +44,5 @@
         });
 
         $('[name="{{ name }}[language]"]').val("{{ value.language is defined ? value.language : 'javascript' }}");
-    }
+    });
 </script>
