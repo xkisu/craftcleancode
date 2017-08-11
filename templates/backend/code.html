@@ -9,6 +9,7 @@
     <option value="nginx">Nginx</option>
     <option value="php">PHP</option>
     <option value="python">Python</option>
+    <option value="clike">Java</option>
     <option value="sass">Sass</option>
     <option value="sql">SQL</option>
     <option value="vue">Vue</option>
@@ -19,7 +20,16 @@
 <textarea class="backendcode" name="{{ name }}[code]">{{ value.code is defined ? value.code }}</textarea>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
+    if(document.readyState === "complete") {
+        createCodeArea{{name}}();
+    } else {
+        document.addEventListener("DOMContentLoaded", function(event) {
+            createCodeArea{{name}}();
+        });
+    }
+    
+
+    function createCodeArea{{name}}() {
         console.log('[name="{{ name }}[code]"]');
         var editor = CodeMirror.fromTextArea(
             $('[name="{{ name }}[code]"]').get(0), {
@@ -44,5 +54,5 @@
         });
 
         $('[name="{{ name }}[language]"]').val("{{ value.language is defined ? value.language : 'javascript' }}");
-    });
+    }
 </script>
