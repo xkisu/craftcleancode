@@ -13,5 +13,21 @@
         "notes": [
             "[Fixed] Code over ~200 chars not being saved"
         ]
+    },
+    {
+        "version": "1.0.2",
+        "downloadUrl": "https://github.com/xkisu/craftcleancode/archive/master.zip",
+        "date": "2017-08-11T28:24:00.586Z",
+        "notes": [
+            "[Fixed] New code fields being added via matix not being initialized correctly"
+        ]
+    },
+    {
+        "version": "1.0.3",
+        "downloadUrl": "https://github.com/xkisu/craftcleancode/archive/master.zip",
+        "date": "2017-08-28T28:24:00.586Z",
+        "notes": [
+            "[Fixed] Code editor not being initialized correctly in matrixes"
+        ]
     }
 ]

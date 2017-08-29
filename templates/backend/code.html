@@ -17,19 +17,21 @@
     <option value="yaml">Yaml</option>
 </select>
 
+{% set safename = id | replace({'-': ''}) %}
+
 <textarea class="backendcode" name="{{ name }}[code]">{{ value.code is defined ? value.code }}</textarea>
 
 <script>
     if(document.readyState === "complete") {
-        createCodeArea{{name}}();
+        createCodeArea{{safename}}();
     } else {
         document.addEventListener("DOMContentLoaded", function(event) {
-            createCodeArea{{name}}();
+            createCodeArea{{safename}}();
         });
     }
     
 
-    function createCodeArea{{name}}() {
+    function createCodeArea{{safename}}() {
         console.log('[name="{{ name }}[code]"]');
         var editor = CodeMirror.fromTextArea(
             $('[name="{{ name }}[code]"]').get(0), {
