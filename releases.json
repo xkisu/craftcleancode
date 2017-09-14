@@ -29,5 +29,13 @@
         "notes": [
             "[Fixed] Code editor not being initialized correctly in matrixes"
         ]
+    },
+    {
+        "version": "1.0.4",
+        "downloadUrl": "https://github.com/xkisu/craftcleancode/archive/master.zip",
+        "date": "2017-08-28T28:24:00.586Z",
+        "notes": [
+            "[Change] Minor change to fix csharp highlighting with prism"
+        ]
     }
 ]
